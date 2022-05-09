@@ -1,0 +1,87 @@
+.footer-primary {
+  background-color: $brand-secondary;
+  color: $gray-tertiary;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 32px;
+  padding: 46px 50px 50px 50px;
+
+  &-inner {
+    display: grid;
+    row-gap: 50px;
+    grid-template-areas:
+      'nav'
+      'contact'
+      'support';
+
+    @include media-breakpoint-up(lg) {
+      grid-template-areas:
+        'nav nav'
+        'support contact';
+      grid-template-columns: 330px 1fr;
+    }
+  }
+
+  .footer-nav {
+    grid-area: nav;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 50px;
+
+    ul {
+      width: 45%;
+    }
+
+    a {
+      padding: 4px 0;
+      display: inline-block;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      gap: 36px;
+
+      ul {
+        width: auto;
+      }
+
+      a {
+        padding: 0;
+      }
+    }
+  }
+
+  .footer-support {
+    grid-area: support;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      align-self: end;
+
+      ul {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .footer-contact {
+    grid-area: contact;
+    text-transform: initial;
+
+    p {
+      margin: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      align-self: end;
+      max-width: 300px;
+    }
+  }
+}
