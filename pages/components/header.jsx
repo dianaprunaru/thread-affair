@@ -23,13 +23,13 @@ export default function Header() {
           <ul>
             <li>
               <a href="" title="Menu">
-                <i class="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars"></i>
               </a>
             </li>
 
             <li>
               <a href="" title="Search">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass"></i>
               </a>
             </li>
           </ul>

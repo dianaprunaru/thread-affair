@@ -1,0 +1,78 @@
+.banner-main {
+  background: $gray-secondary url('/images/banners/banner-02.jpg') no-repeat
+    center center / cover;
+  height: 716px;
+  color: $white;
+  text-align: center;
+
+  .banner-main-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: inherit;
+
+    @include media-breakpoint-up(lg) {
+      align-items: flex-end;
+      justify-content: center;
+      padding-right: 50px;
+      position: relative;
+    }
+
+    .banner-info {
+      h1 {
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 40px;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 75px;
+        }
+      }
+
+      h2 {
+        font-size: 27px;
+        font-weight: 300;
+        margin-bottom: 50px;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 42px;
+        }
+      }
+    }
+
+    .banner-copy {
+      width: 210px;
+      font-weight: 300;
+      font-size: 18px;
+      margin: 40px 0 70px 0;
+
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        bottom: 16px;
+        right: 50px;
+        width: auto;
+        margin: 0;
+        font-size: 14px;
+        text-align: right;
+
+        p {
+          margin: 0;
+          line-height: 17px;
+        }
+      }
+
+      p {
+        span {
+          display: block;
+          font-size: 24px;
+
+          @include media-breakpoint-up(lg) {
+            display: inline;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
