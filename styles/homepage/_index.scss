@@ -36,9 +36,44 @@
         font-weight: 500;
       }
     }
+  }
 
+  .product-tiles {
+    margin-bottom: 50px;
+  }
+
+  .demo-flex {
     .product-tiles {
-      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      row-gap: 70px;
+
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        column-gap: 8.828125%;
+      }
+    }
+  }
+
+  // studiu
+  .demo-grid {
+    .product-tiles {
+      display: grid;
+      row-gap: 70px;
+
+      @include media-breakpoint-up(lg) {
+        grid-template-columns: 27.34375% 1fr 27.34375% 1fr 27.34375%;
+
+        .product-tile:nth-of-type(2) {
+          grid-column: 3 / span 1;
+        }
+
+        .product-tile:nth-of-type(3) {
+          grid-column: 5 / span 1;
+        }
+      }
     }
   }
 }
