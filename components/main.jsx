@@ -1,3 +1,4 @@
+import ProductTile from './catalog/product-tile';
 import HomeNewsletter from './homepage/home-newsletter';
 
 export default function Main() {
@@ -52,8 +53,18 @@ export default function Main() {
             </p>
           </header>
 
-          <section className="product-tiles">
-            {/* insert product-tile */}
+          <section className="product-tiles row">
+            <div className="col-12 col-lg-3">
+              <ProductTile></ProductTile>
+            </div>
+
+            <div className="col-12 col-lg-3 offset-lg-1 mt-4 mt-lg-0">
+              <ProductTile></ProductTile>
+            </div>
+
+            <div className="col-12 col-lg-3 offset-lg-1 mt-4 mt-lg-0">
+              <ProductTile></ProductTile>
+            </div>
           </section>
 
           <footer>
